@@ -1,5 +1,6 @@
 {
   "name": "kanban",
+  "author": "Iair Poloniecki <iairpoloniecki@tuta.io> (https://github.com/iairpolo/)",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
