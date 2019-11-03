@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #f79d16, #30cbf2);
+}
+
+.mainKanban {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}

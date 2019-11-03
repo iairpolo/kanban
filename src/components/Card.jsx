@@ -16,7 +16,7 @@ const Card = ({ card }) => {
   };
 
   return (
-    <div className='Card'>
+    <li className='Card'>
       <p>{card.title}</p>
       <p>{card.date}</p>
       <label>Move:</label>
@@ -35,7 +35,7 @@ const Card = ({ card }) => {
           Done
         </button>
       )}
-    </div>
+    </li>
   );
 };
 

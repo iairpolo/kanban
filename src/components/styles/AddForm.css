@@ -1,0 +1,29 @@
+.Header {
+  text-align: center;
+  padding: 20px 25vw;
+}
+
+.AddForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AddForm__Bottom {
+  margin-top: 10px;
+  width: 60%;
+  display: flex;
+}
+
+.AddForm__TaskInput {
+  width: 100%;
+}
+
+.AddForm__DueDateInput {
+  margin: 0 10px;
+  flex-grow: 2;
+}
+
+.AddForm__AddButton {
+  flex-grow: 1;
+}

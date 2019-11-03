@@ -12,24 +12,26 @@ const App = () => {
   const done = useSelector(state => state.done);
 
   return (
-    <>
+    <div className='App'>
       <AddForm />
-      <List title='To-Do'>
-        {todo.map(card => (
-          <Card key={card.id} card={card} />
-        ))}
-      </List>
-      <List title='In Progress'>
-        {inProgress.map(card => (
-          <Card key={card.id} card={card} />
-        ))}
-      </List>
-      <List title='Done'>
-        {done.map(card => (
-          <Card key={card.id} card={card} />
-        ))}
-      </List>
-    </>
+      <main className='mainKanban'>
+        <List title='To-Do'>
+          {todo.map(card => (
+            <Card key={card.id} card={card} />
+          ))}
+        </List>
+        <List title='In Progress'>
+          {inProgress.map(card => (
+            <Card key={card.id} card={card} />
+          ))}
+        </List>
+        <List title='Done'>
+          {done.map(card => (
+            <Card key={card.id} card={card} />
+          ))}
+        </List>
+      </main>
+    </div>
   );
 };
 
