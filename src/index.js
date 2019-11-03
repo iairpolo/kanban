@@ -6,9 +6,7 @@ import reducer from './reducers';
 import './index.css';
 import App from './containers/App';
 
-const initialState = { tasks: [] };
-
-const store = createStore(reducer, initialState);
+const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
