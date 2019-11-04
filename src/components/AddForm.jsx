@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { ADD_TASK } from '../types/index';
 
 import './styles/AddForm.css';
 
 const AddForm = () => {
-  const initialForm = { title: '', dueDate: '' };
   const dispatch = useDispatch();
-  const [form, setForm] = useState(initialForm);
+  const [task, setTask] = useState('');
+  const [dueDate, setDueDate] = useState();
 
   const handleChange = event => {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value
-    });
+    setTask(event.target.value);
   };
 
-  let taskId = 8;
+  let taskId = 3;
 
   const handleAddTask = event => {
     event.preventDefault();
     dispatch({
       type: ADD_TASK,
-      id: taskId,
-      title: form.title,
-      dueDate: form.dueDate
+      id: taskId++,
+      title: task,
+      dueDate: dueDate
     });
-    setForm(initialForm);
+    setTask('');
+    setDueDate(new Date());
+    console.log(taskId);
   };
 
   return (
@@ -38,18 +39,19 @@ const AddForm = () => {
           onChange={handleChange}
           type='text'
           name='title'
-          value={form.title}
+          value={task}
           placeholder='Task'
-          className='AddForm__TaskInput'
+          className='AddForm__TaskInput Input'
         />
         <div className='AddForm__Bottom'>
           <label>Due date: </label>
-          <input
-            onChange={handleChange}
-            type='date'
-            name='dueDate'
-            value={form.dueDate}
-            className='AddForm__DueDateInput'
+
+          <DatePicker
+            dateFormat='dd/MM/yyyy'
+            placeholderText='Click to select a date'
+            className='AddForm__DueDateInput Input'
+            selected={dueDate}
+            onChange={date => setDueDate(date)}
           />
           <button type='submit' className='AddForm__AddButton'>
             Add

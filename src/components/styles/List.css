@@ -1,0 +1,12 @@
+.List {
+  background-color: rgba(255, 255, 255, 0.75);
+  min-width: 300px;
+  padding: 10px;
+}
+
+.List h2 {
+}
+
+.List ul {
+  margin: 0;
+}
