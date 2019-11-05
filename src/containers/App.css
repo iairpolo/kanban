@@ -3,6 +3,26 @@
   background: linear-gradient(to right bottom, #f79d16, #30cbf2);
 }
 
+.Header {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 23vw auto 23vw;
+}
+
+.Header p {
+  margin-left: auto;
+  margin-top: 0;
+  color: white;
+}
+
+.Header a {
+  color: white;
+}
+
+.Header a:hover {
+  text-decoration: none;
+}
+
 .mainKanban {
   padding: 0 40px;
   display: flex;

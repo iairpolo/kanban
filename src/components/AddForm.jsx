@@ -27,34 +27,32 @@ const AddForm = () => {
   };
 
   return (
-    <header className='Header'>
-      <form onSubmit={handleAddTask} className='AddForm'>
-        <input
-          autoFocus
-          required
-          onChange={handleChange}
-          type='text'
-          name='title'
-          value={task}
-          placeholder='Add task'
-          className='AddForm__TaskInput Input'
-        />
-        <div className='AddForm__Bottom'>
-          <label>Due date: </label>
+    <form onSubmit={handleAddTask} className='AddForm'>
+      <input
+        autoFocus
+        required
+        onChange={handleChange}
+        type='text'
+        name='title'
+        value={task}
+        placeholder='Add task'
+        className='AddForm__TaskInput Input'
+      />
+      <div className='AddForm__Bottom'>
+        <label>Due date: </label>
 
-          <DatePicker
-            dateFormat='dd/MM/yyyy'
-            placeholderText='Click to select a date'
-            className='AddForm__DueDateInput Input'
-            selected={dueDate}
-            onChange={date => setDueDate(date)}
-          />
-          <button type='submit' className='AddForm__AddButton'>
-            Add
-          </button>
-        </div>
-      </form>
-    </header>
+        <DatePicker
+          dateFormat='dd/MM/yyyy'
+          placeholderText='Click to select a date'
+          className='AddForm__DueDateInput Input'
+          selected={dueDate}
+          onChange={date => setDueDate(date)}
+        />
+        <button type='submit' className='AddForm__AddButton'>
+          Add
+        </button>
+      </div>
+    </form>
   );
 };
 

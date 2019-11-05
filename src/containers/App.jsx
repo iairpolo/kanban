@@ -13,7 +13,10 @@ const App = () => {
 
   return (
     <div className='App'>
-      <AddForm />
+      <header className='Header'>
+        <AddForm />
+        <p>Developed by <a href="https://github.com/iairpolo">Iair Poloniecki</a></p>
+      </header>
       <main className='mainKanban'>
         <List title='To-Do'>
           {todo.map(card => (

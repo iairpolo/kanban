@@ -1,7 +1,7 @@
 {
   "name": "kanban",
   "author": "Iair Poloniecki <iairpoloniecki@tuta.io> (https://github.com/iairpolo/)",
-  "version": "0.1.0",
+  "version": "0.86.0",
   "private": true,
   "dependencies": {
     "react": "^16.11.0",
