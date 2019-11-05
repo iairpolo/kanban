@@ -15,19 +15,15 @@ const AddForm = () => {
     setTask(event.target.value);
   };
 
-  let taskId = 3;
-
   const handleAddTask = event => {
     event.preventDefault();
     dispatch({
       type: ADD_TASK,
-      id: taskId++,
       title: task,
-      dueDate: dueDate
+      dueDate: dueDate ? dueDate.toDateString() : null
     });
     setTask('');
-    setDueDate(new Date());
-    console.log(taskId);
+    setDueDate();
   };
 
   return (
@@ -40,7 +36,7 @@ const AddForm = () => {
           type='text'
           name='title'
           value={task}
-          placeholder='Task'
+          placeholder='Add task'
           className='AddForm__TaskInput Input'
         />
         <div className='AddForm__Bottom'>

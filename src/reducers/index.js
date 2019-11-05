@@ -1,23 +1,12 @@
 import { ADD_TASK, MOVE_TASK } from '../types/index';
 
 const initialState = {
-  todo: [
-    {
-      id: 1,
-      title: 'Una cosa',
-      date: '',
-      list: 'todo'
-    },
-    {
-      id: 2,
-      title: 'Una cosa',
-      date: '',
-      list: 'todo'
-    }
-  ],
+  todo: [],
   inProgress: [],
   done: []
 };
+
+let taskId = 0;
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -27,7 +16,7 @@ const reducer = (state = initialState, action) => {
         todo: [
           ...state.todo,
           {
-            id: action.id,
+            id: taskId++,
             title: action.title,
             date: action.dueDate,
             list: 'todo'

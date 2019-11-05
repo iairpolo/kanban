@@ -3,11 +3,11 @@
   min-width: 300px;
   padding: 20px;
   border-radius: 20px;
-  min-height: 40px;
+  height: min-content;
 }
 
 .List h2 {
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 .List ul {

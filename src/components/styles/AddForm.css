@@ -37,7 +37,8 @@
   flex: 3;
 }
 
-.react-datepicker__day--selected {
+.react-datepicker__day--selected,
+.react-datepicker__day--today {
   background-color: rgb(255, 81, 0);
 }
 

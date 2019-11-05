@@ -1,0 +1,38 @@
+.Card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Card__Title {
+  margin: 0 10px 0 0;
+}
+
+.Card__Date {
+  margin: 2px 10px 0 0;
+  padding: 0 2px;
+  background: rgb(255, 81, 0);
+  color: white;
+}
+
+.Card__Button {
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.green {
+  background-color: green;
+}

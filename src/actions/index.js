@@ -1,8 +1,7 @@
 import { ADD_TASK, MOVE_TASK } from '../types/index';
 
-export const addTask = (id, title, dueDate) => ({
+export const addTask = (title, dueDate) => ({
   type: ADD_TASK,
-  id,
   title,
   dueDate
 });
